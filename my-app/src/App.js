@@ -28,10 +28,10 @@ function App() {
   }, [searchValue]);
 
   return (
-    <>
+    <div className="page">
       <NavbarComponent searchValue={searchValue} handleSearch={handleSearch} />
       <MovieListComponent movies={movies} />
-    </>
+    </div>
   );
 }
 
