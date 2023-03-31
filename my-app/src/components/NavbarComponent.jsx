@@ -2,11 +2,12 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
+import { NavLink } from "react-router-dom";
 const NavbarComponent = (props) => {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">Movie App</Navbar.Brand>
+        <NavLink to="/" className="navbar-brand">MovieApp</NavLink>
         <Form className="d-flex">
           <Form.Control
             type="search"
@@ -15,6 +16,7 @@ const NavbarComponent = (props) => {
             aria-label="Search"
             value={props.value}
             onChange={props.handleSearch}
+            onKeyDown={props.handleKeyDown}
           />
         </Form>
       </Container>
