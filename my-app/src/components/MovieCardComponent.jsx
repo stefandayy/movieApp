@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 const MovieCardComponent = (props) => {
   return (
     <Link to={`/movie/${props.movie.imdbID}`} style={{textDecoration:"none"}} className="cardLink" >
-      <Card bg="dark" text="white" style={{ width: "200px" }}>
+      <Card bg="dark" text="white" style={{ width: "200px" }} className="p-2">
         <Card.Img variant="top" src={props.movie.Poster} />
         <Card.Body className="text-center">
           <Card.Title>{props.movie.Title}</Card.Title>

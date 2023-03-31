@@ -8,7 +8,7 @@ const MovieListComponent = (props) => {
   const { movies } = props;
   return (
     <Container>
-      <Row xs={1} md={2} lg={4} className="g-4 pt-5 d-flex justify-content-center">
+      <Row xs={1} md={2} lg={4} className="g-4 pt-5 mx-5">
         {movies.map((movie) => (
           <Col>
             <MovieCardComponent movie={movie} />
