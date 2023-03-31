@@ -4,13 +4,13 @@ import axios from "axios";
 import { Container, Card, Row, Col,Button} from "react-bootstrap";
 import NoSearchNavbarComponent from "../components/NoSearchNavbarComponent";
 
-const MovieDetailPage = (props) => {
+const MovieDetailPage = () => {
   const { imdbID } = useParams();
   const [movie, setMovie] = useState({});
 
   useEffect(() => {
     axios
-      .get(`http://www.omdbapi.com/?i=${imdbID}&plot=full&apikey=1f09a29b`)
+      .get(`https://www.omdbapi.com/?i=${imdbID}&plot=full&apikey=1f09a29b`)
       .then((response) => {
         setMovie(response.data);
       })
